@@ -19,7 +19,9 @@ const Flights = ({ departureFlights, arrivalFlights, getFlightsList }) => {
   const history = useHistory();
 
   useEffect(() => {
-    history.push(`/${direction}?date=${date}${value ? `&search=${value}` : ''}`);
+    history.push(
+      `/${direction}?date=${date}${searchValue ? `&search=${searchValue}` : ''}`
+    );
   }, [date, value, direction]);
 
   useEffect(() => {

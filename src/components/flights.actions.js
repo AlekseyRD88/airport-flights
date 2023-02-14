@@ -1,10 +1,10 @@
 import { fetchFlights } from '../gateway';
 
-export const FLIGHT_LIST_RECEIVED = 'FLIGHTS_LIST_RECEIVED';
+export const FLIGHTS_LIST_RECEIVED = 'FLIGHTS_LIST_RECEIVED';
 
 export const flightsListReceived = (arrival, departure) => {
   return {
-    type: FLIGHT_LIST_RECEIVED,
+    type: FLIGHTS_LIST_RECEIVED,
     payload: {
       arrival,
       departure
@@ -12,7 +12,7 @@ export const flightsListReceived = (arrival, departure) => {
   };
 };
 
-export const getFlightsList = (date) => {
+export const getFlightsList = (date) => dispatch => {
   fetchFlights(date).then(flights => {
     dispatch(flightsListReceived(flights.body.arrival, flights.body.departure))
   });
