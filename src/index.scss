@@ -1,0 +1,19 @@
+@import './styles/breakpoints.scss';
+@import './styles/common.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e7efec;
+  color: #2f2f2f;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

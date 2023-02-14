@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #757070;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 18px;
+  &__list {
+    list-style: none;
+  }
+}
