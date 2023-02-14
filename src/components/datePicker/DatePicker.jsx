@@ -15,7 +15,7 @@ const DatePicker = ({ date, setDate, setValue }) => {
   
   return (
     <div className="navigation-date">
-      <div class="navigation__date-calender">
+      <div className="navigation__date-calender">
         <span className="navigation__date-value">
         {moment(date).format('DD/MM')}
         </span>

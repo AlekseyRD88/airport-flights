@@ -1,3 +1,3 @@
-export const flightArrivalSelector = state => state.flightsReducer.flightsList.arrival;
+export const flightArrivalSelector = state => state.board.flightsList.arrival;
 
-export const flightDepartureSelector = state => state.flightsReducer.flightsList.departure;
+export const flightDepartureSelector = state => state.board.flightsList.departure;
