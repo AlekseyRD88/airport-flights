@@ -1,6 +1,6 @@
 # Flights of the airport
 This project with using React and Redux shows the list of flights of Kyiv Sikorsky airport.
-#### [The airport Link]()
+#### [The airport Link](https://dainty-fudge-09b940.netlify.app/)
 
 #### The tech stack is
 * [HTML](https://en.wikipedia.org/wiki/HTML)
@@ -11,7 +11,7 @@ This project with using React and Redux shows the list of flights of Kyiv Sikors
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * [React](https://en.wikipedia.org/wiki/React_(JavaScript_library))
 * [Webpack](https://webpack.js.org/)
-* [Redux] (https://redux.js.org/)
+* [Redux](https://redux.js.org/)
 
 #### Author
 * Oleksiy Zhandarov
