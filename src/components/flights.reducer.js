@@ -9,7 +9,9 @@ const initialState = {
 
 const flightsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FLIGHTS_LIST_RECEIVED: {
+    default:
+        return state;
+    case FLIGHTS_LIST_RECEIVED: 
       return {
         ...state, 
         flightsList: {
@@ -18,9 +20,6 @@ const flightsReducer = (state = initialState, action) => {
         },
       };
       }
-      default:
-        return state;
-    }
 };
 
 export default flightsReducer;

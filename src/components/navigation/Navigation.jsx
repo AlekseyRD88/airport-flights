@@ -11,6 +11,6 @@ const Navigation = ({ setValue, date, setDate, direction, setDirection }) => {
       setValue={setValue} date={date} setDate={setDate} />
     </div>
   );
-}
+};
 
 export default Navigation;

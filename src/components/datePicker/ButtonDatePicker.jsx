@@ -3,7 +3,7 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 
 const ButtonDatePicker = ({ date, handleButton, dateButton, day }) => {
-  const nameForClass = date === dateButton 
+  const classNames = date === dateButton 
     ? 'navigation__date-day navigation__date-day_active'
     : 'navigation__date-day';
 
@@ -11,7 +11,8 @@ const ButtonDatePicker = ({ date, handleButton, dateButton, day }) => {
     <button
     onClick={handleButton}
     data-day={dateButton}
-    className={nameForClass}>
+    className={classNames}
+    >
       <div>{moment(dateButton).format('DD/MM')}</div>
       <div>{day}</div>
     </button>

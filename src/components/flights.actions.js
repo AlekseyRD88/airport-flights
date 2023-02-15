@@ -14,6 +14,6 @@ export const flightsListReceived = (arrival, departure) => {
 
 export const getFlightsList = (date) => dispatch => {
   fetchFlights(date).then(flights => {
-    dispatch(flightsListReceived(flights.body.arrival, flights.body.departure))
+    dispatch(flightsListReceived(flights.body.arrival, flights.body.departure));
   });
 };

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './flights.scss';
 import Search from '../search/Search';
-import FlightTable from '../flightTable/FlightTable';
+import FlightsTable from '../flightsTable/FlightsTable';
 import Navigation from '../navigation/Navigation';
 import { Switch, Route, useLocation, useHistory } from 'react-router-dom';
 import * as flightsActions from '../flights.actions';
@@ -15,12 +15,12 @@ const Flights = ({ departureFlights, arrivalFlights, getFlightsList }) => {
   const [date, setDate] = useState(moment(new Date()).format('YYYY-MM-DD'));
   const [direction, setDirection] = useState('');
   const [value, setValue] = useState('');
-  const {search, pathname} = useLocation();
+  const { search, pathname } = useLocation();
   const history = useHistory();
 
   useEffect(() => {
     history.push(
-      `/${direction}?date=${date}${searchValue ? `&search=${searchValue}` : ''}`
+      `/${direction}?date=${date}${value ? `&search=${value}` : ''}`
     );
   }, [date, value, direction]);
 
@@ -30,12 +30,12 @@ const Flights = ({ departureFlights, arrivalFlights, getFlightsList }) => {
 
   useEffect(() => {
     if (search) {
-      const valueData = qs.parse(search, { ignoreQueryPrefix: true});
-      if (valueData.date) {
-        setDate(valueData.date);
+      const data = qs.parse(search, { ignoreQueryPrefix: true });
+      if (data.date) {
+        setDate(data.date);
       }
-      if (valueData.search) {
-        setValue(valueData.search);
+      if (data.search) {
+        set(data.search);
       }
     }
     setDirection(pathname.slice(1) === 'arrival' ? 'arrival' : 'departure');
@@ -63,10 +63,10 @@ const Flights = ({ departureFlights, arrivalFlights, getFlightsList }) => {
         direction={direction} setDirection={setDirection} setValue={setValue} />
         <Switch>
           <Route path="/departure">
-            <FlightTable flights={filterFlights(departureFlights)} />
+            <FlightsTable flights={filterFlights(departureFlights)} />
           </Route>
           <Route path="/arrival">
-            <FlightTable flights={filterFlights(arrivalFlights)} />
+            <FlightsTable flights={filterFlights(arrivalFlights)} />
           </Route>
           <Route path="*">
             <h4>Reload this page</h4>
@@ -88,7 +88,7 @@ const mapDispatch = {
   getFlightsList: flightsActions.getFlightsList,
 }
 
-export default connect(mapState, mapDispatch) (Flights);
+export default connect(mapState, mapDispatch)(Flights);
 
 Flights.propTypes = {
   arrivalFlights: PropTypes.array.isRequired,
