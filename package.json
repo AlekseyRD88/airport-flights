@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode=development --devtool source-map --open",
-    "build": "webpack --mode=production",
-    "test": "jest",
-    "lint": "eslint src"
+    "start": "webpack serve --mode=development --devtool source-map",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +41,5 @@
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
     "reselect": "^4.1.6"
-  },
-  "description": ""
+  }
 }

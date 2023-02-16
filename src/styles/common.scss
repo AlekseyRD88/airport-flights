@@ -1,9 +1,13 @@
-.page {
+.main {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 80%;
-  height: 100vh;
+  min-height: 100%;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 90%;
+  min-height: 100%;
 }
 
 .button {

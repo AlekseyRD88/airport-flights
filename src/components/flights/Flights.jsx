@@ -18,6 +18,7 @@ const Flights = ({ departureFlights, arrivalFlights, getFlightsList }) => {
   const { search, pathname } = useLocation();
   const history = useHistory();
 
+
   useEffect(() => {
     history.push(
       `/${direction}?date=${date}${value ? `&search=${value}` : ''}`
@@ -43,14 +44,14 @@ const Flights = ({ departureFlights, arrivalFlights, getFlightsList }) => {
 
   const filterFlights = (flights) => {
     return flights.filter((flight) => {
-      const place = flight['airportToId.city_en']
-        ? flight['airportToId.city_en']
-        : flight['airportFromId.city_en'];
+      const city = flight['airportToID.city_en']
+        ? flight['airportToID.city_en']
+        : flight['airportFromID.city_en'];
       
       return (
-      place.toLowerCase().includes(value) || 
-      flight.airline.en.name.toLowerCase().includes(value) ||
-      flight.codeShareData[0].codeShare.toLowerCase().includes(value)
+        city.toLowerCase().includes(value) ||
+        flight.airline.en.name.toLowerCase().includes(value) ||
+        flight.codeShareData[0].codeShare.toLowerCase().includes(value)
       );
     });
   };

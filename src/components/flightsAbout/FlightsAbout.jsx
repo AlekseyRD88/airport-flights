@@ -4,15 +4,15 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 
 const FlightsAbout = ({ flight, index }) => {
-  const { airline, actual, condition, status, codeShareData } = flight;
-  const airportDestination = flight['airportToId.city_en']
-  ? flight['airportToId.city_en']
-  : flight['airportFromId.city_en'];
+  const { airline, actual, term, status, codeShareData } = flight;
+  const airportDestination = flight['airportToID.city_en']
+  ? flight['airportToID.city_en']
+  : flight['airportFromID.city_en'];
 
   let terminal;
-  if (condition === 'A') {
+  if (term === 'A') {
     terminal = '#63c745';
-  } else if (condition === 'B') {
+  } else if (term === 'B') {
     terminal = '#d16aae';
   } else terminal = '#1eb7ee';
 
@@ -26,7 +26,7 @@ const FlightsAbout = ({ flight, index }) => {
     <tr className={classNames}>
        <td className="table__item">
         <span className="terminal" style={terminalStyle}>
-          {condition}
+          {term}
         </span>
        </td>
        <td className="table__item">

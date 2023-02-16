@@ -10,14 +10,15 @@ const App = () => {
   return(
       <Provider store={store}>
         <BrowserRouter>
-          <div className="page">
+          <div className="main">
           <Header />
+          <div className="container">
           <Flights />
+          </div>
           <Footer />
         </div>  
         </BrowserRouter>
     </Provider>
-    
   );
 };
 

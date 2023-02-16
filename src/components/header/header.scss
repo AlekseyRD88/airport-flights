@@ -9,17 +9,17 @@
   color: #fff;
   background-color: #1eb7ee;
   z-index: 3;
-}
-
-.navigation-list {
-  display: flex;
-  list-style: none;
-  &__item {
-    font-size: 20px;
-    line-height: 32px;
-    padding: 0px 30px;
-    cursor: pointer;
+  
+  &__navigation-list {
+    display: flex;
+    list-style: none;
   }
+  &__navigation-list__item {
+      font-size: 20px;
+      line-height: 32px;
+      padding: 0px 30px;
+      cursor: pointer;
+    }
 }
 
 .logo {

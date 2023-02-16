@@ -18,13 +18,13 @@ const Direction = ({ direction, setDirection }) => {
       </button>
       <button className={getClassName('arrival')} onClick={handleClick}>
       <i className="fa-solid fa-plane navigation__icon navigation__icon_arrivals" />
-        Departure
+        Arrival
       </button>
     </div>
   );
 };
 
-export default Navigation;
+export default Direction;
 
 Direction.propTypes = {
   direction: PropTypes.string.isRequired,

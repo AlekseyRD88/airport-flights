@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './search.scss';
 
-const Search = ({ setSearchValue }) => {
+const Search = ({ setValue }) => {
   const [inputValue, setInputValue] = useState('');
   const handleSearch = event => {
     setInputValue(event.target.value);
   };
   const handleSearchList = () => {
-    setSearchValue(inputValue.toLowerCase());
+    setValue(inputValue.toLowerCase());
     setInputValue('');
   };
 
@@ -17,7 +17,7 @@ const Search = ({ setSearchValue }) => {
       <div className="search__container">
         <i className="fa-solid fa-magnifying-glass search-icon" />
         <input className="search__input" type="text"
-          placeholder="Airline, direction, flight" value={inputValue}
+          placeholder="Airline, direction or flight #" value={inputValue}
           onChange={handleSearch} />
       </div>
       <button className="button search__button" onClick={handleSearchList}>

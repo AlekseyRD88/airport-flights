@@ -4,7 +4,7 @@ import './footer.scss';
 const Footer = () => {
   return (
     <div className="footer">
-    <ul className="footer-list">
+    <ul className="footer__list">
     <h4>Passengers info</h4>
     <li>Flight schedule</li>
     <li>Services</li>
@@ -12,7 +12,7 @@ const Footer = () => {
     <li>Privacy policy</li>
     <li>Feedback</li>
     </ul>
-    <ul className="footer-list">
+    <ul className="footer__list">
     <h4>Main page</h4>
     <li>Services</li>
     <li>Ground service</li>
@@ -20,7 +20,7 @@ const Footer = () => {
     <li>Training centre</li>
     <li>Careers</li>
     </ul>
-    <ul className="footer-list">
+    <ul className="footer__list">
     <h4>Press centre</h4>
     <li>Main page</li>
     <li>Latest news</li>

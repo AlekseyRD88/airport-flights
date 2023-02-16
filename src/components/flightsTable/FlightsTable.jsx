@@ -19,7 +19,7 @@ const FlightTable = ({ flights }) => {
       </thead>
       <tbody className="table__flights">
         {flights.map((flight, index) => (
-          <FlightsAbout flight={flight} key={flight.Id} index={index + 1} />
+          <FlightsAbout flight={flight} key={flight.ID} index={index + 1} />
         ))
         .sort((a, b) => new Date(a.timeToStand) - new Date(b.timeToStand))
         }
